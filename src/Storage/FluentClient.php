@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Storage;
+namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;

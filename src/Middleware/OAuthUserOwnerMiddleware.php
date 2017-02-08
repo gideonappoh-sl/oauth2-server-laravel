@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Middleware;
+namespace Streamlabs\OAuth2Server\Middleware;
 
 use Closure;
 use League\OAuth2\Server\Exception\AccessDeniedException;
-use Harsha\OAuth2Server\Authorizer;
+use Streamlabs\OAuth2Server\Authorizer;
 
 /**
  * This is the oauth user middleware class.
@@ -25,14 +25,14 @@ class OAuthUserOwnerMiddleware
     /**
      * The Authorizer instance.
      *
-     * @var \Harsha\OAuth2Server\Authorizer
+     * @var \Streamlabs\OAuth2Server\Authorizer
      */
     protected $authorizer;
 
     /**
      * Create a new oauth user middleware instance.
      *
-     * @param \Harsha\OAuth2Server\Authorizer $authorizer
+     * @param \Streamlabs\OAuth2Server\Authorizer $authorizer
      */
     public function __construct(Authorizer $authorizer)
     {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Storage;
+namespace Streamlabs\OAuth2Server\Storage;
 
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 use League\OAuth2\Server\Entity\ScopeEntity;

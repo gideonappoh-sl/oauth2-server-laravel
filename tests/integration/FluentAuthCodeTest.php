@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-use Harsha\OAuth2Server\Storage\FluentAuthCode;
+use Streamlabs\OAuth2Server\Storage\FluentAuthCode;
 use Mockery as m;
 
 class FluentAuthCodeTest extends AbstractDBTestCase

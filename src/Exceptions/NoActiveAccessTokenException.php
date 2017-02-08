@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Exceptions;
+namespace Streamlabs\OAuth2Server\Exceptions;
 
 use Exception;
 

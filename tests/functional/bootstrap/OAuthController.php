@@ -11,7 +11,7 @@
  */
 
 use Illuminate\Routing\Controller;
-use Harsha\OAuth2Server\Authorizer;
+use Streamlabs\OAuth2Server\Authorizer;
 
 class OAuthController extends Controller
 {

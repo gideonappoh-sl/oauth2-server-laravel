@@ -3,34 +3,34 @@
 Composer is the recommended way to install this package. Add the following line to your `composer.json` file:
 
 ```json
-"h4r5h4/oauth2-server-laravel": "5.1.*"
+"twitchalerts/oauth2-server-laravel": "5.1.*"
 ```
 
 Then run `composer update` to get the package.
 
 Once composer has installed the package add this line of code to the `providers` array located in your `config/app.php` file:
 ```php
-Harsha\OAuth2Server\Storage\FluentStorageServiceProvider::class,
-Harsha\OAuth2Server\OAuth2ServerServiceProvider::class,
+Streamlabs\OAuth2Server\Storage\FluentStorageServiceProvider::class,
+Streamlabs\OAuth2Server\OAuth2ServerServiceProvider::class,
 ```
 
 Add this line to the `aliases` array:
 ```php
-'Authorizer' => Harsha\OAuth2Server\Facades\Authorizer::class,
+'Authorizer' => Streamlabs\OAuth2Server\Facades\Authorizer::class,
 ```
 
 Add the following line to your `app/Http/Kernel.php` file in the `$middleware` array
 ```php
-\Harsha\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class,
+\Streamlabs\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class,
 ```
 This will catch any OAuth error and respond appropriately.
 
 Then add
 ```php
-'oauth' => \Harsha\OAuth2Server\Middleware\OAuthMiddleware::class,
-'oauth-user' => \Harsha\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
-'oauth-client' => \Harsha\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
-'check-authorization-params' => \Harsha\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
+'oauth' => \Streamlabs\OAuth2Server\Middleware\OAuthMiddleware::class,
+'oauth-user' => \Streamlabs\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
+'oauth-client' => \Streamlabs\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
+'check-authorization-params' => \Streamlabs\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
 ```
 to the `$routeMiddleware` array.
 

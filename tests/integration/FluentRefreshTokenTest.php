@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-use Harsha\OAuth2Server\Storage\FluentRefreshToken;
+use Streamlabs\OAuth2Server\Storage\FluentRefreshToken;
 use Mockery as m;
 
 class FluentRefreshTokenTest extends AbstractDBTestCase

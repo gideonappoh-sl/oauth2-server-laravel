@@ -41,7 +41,7 @@ When using the client_credentials grant type, the access token owner and the cli
 ### Finding access token owner
 
 ```php
-use Harsha\OAuth2Server\Facades\Authorizer;
+use Streamlabs\OAuth2Server\Facades\Authorizer;
 
 Authorizer::getResourceOwnerId();
 ```

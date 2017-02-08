@@ -1,5 +1,5 @@
 {
-    "name": "h4r5h4/oauth2-server-laravel",
+    "name": "twitchalerts/oauth2-server-laravel",
     "description": "An OAuth 2.0 bridge for Laravel and Lumen",
     "keywords": ["oauth2", "oauth", "server", "api", "laravel", "lumen"],
     "license": "MIT",
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Harsha\\OAuth2Server\\": "src"
+            "Streamlabs\\OAuth2Server\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Harsha\\OAuth2Server\\Tests\\": "tests"
+            "Streamlabs\\OAuth2Server\\Tests\\": "tests"
         },
         "classmap": [
             "database"

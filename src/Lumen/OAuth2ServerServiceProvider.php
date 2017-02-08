@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Lumen;
+namespace Streamlabs\OAuth2Server\Lumen;
 
-use Harsha\OAuth2Server\OAuth2ServerServiceProvider as ServiceProvider;
+use Streamlabs\OAuth2Server\OAuth2ServerServiceProvider as ServiceProvider;
 
 /**
  * This is the Lumen oauth server service provider class.

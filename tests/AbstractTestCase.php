@@ -32,15 +32,15 @@ abstract class AbstractTestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            'Harsha\OAuth2Server\Storage\FluentStorageServiceProvider',
-            'Harsha\OAuth2Server\OAuth2ServerServiceProvider',
+            'Streamlabs\OAuth2Server\Storage\FluentStorageServiceProvider',
+            'Streamlabs\OAuth2Server\OAuth2ServerServiceProvider',
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Authorizer' => 'Harsha\OAuth2Server\Facades\Authorizer',
+            'Authorizer' => 'Streamlabs\OAuth2Server\Facades\Authorizer',
         ];
     }
 }

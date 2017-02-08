@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Facades;
+namespace Streamlabs\OAuth2Server\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

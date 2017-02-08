@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server;
+namespace Streamlabs\OAuth2Server;
 
 use League\OAuth2\Server\AuthorizationServer as Issuer;
 use League\OAuth2\Server\Exception\AccessDeniedException;
 use League\OAuth2\Server\ResourceServer as Checker;
 use League\OAuth2\Server\TokenType\TokenTypeInterface;
 use League\OAuth2\Server\Util\RedirectUri;
-use Harsha\OAuth2Server\Exceptions\NoActiveAccessTokenException;
+use Streamlabs\OAuth2Server\Exceptions\NoActiveAccessTokenException;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -92,7 +92,7 @@ class Authorizer
      *
      * If the session does not have an active access token, an exception will be thrown.
      *
-     * @throws \Harsha\OAuth2Server\Exceptions\NoActiveAccessTokenException
+     * @throws \Streamlabs\OAuth2Server\Exceptions\NoActiveAccessTokenException
      *
      * @return \League\OAuth2\Server\Entity\AccessTokenEntity
      */
@@ -294,7 +294,7 @@ class Authorizer
     {
         return $this->getAccessToken()->getSession()->getId();
     }
-    
+
     /**
      * Set the request to use on the issuer and checker.
      *

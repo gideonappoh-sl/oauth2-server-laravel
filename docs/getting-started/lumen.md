@@ -12,15 +12,15 @@ Then run composer update to get the package.
 In your `bootstrap/app.php` register service providers
 
 ```php
-$app->register(\Harsha\OAuth2Server\Storage\FluentStorageServiceProvider::class);
-$app->register(\Harsha\OAuth2Server\OAuth2ServerServiceProvider::class);
+$app->register(\Streamlabs\OAuth2Server\Storage\FluentStorageServiceProvider::class);
+$app->register(\Streamlabs\OAuth2Server\OAuth2ServerServiceProvider::class);
 ```
 
 ... and middleware
 
 ```php
 $app->middleware([
-    \Harsha\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class
+    \Streamlabs\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class
 ]);
 ```
 
@@ -28,16 +28,16 @@ $app->middleware([
 
 ```php
 $app->routeMiddleware([
-    'check-authorization-params' => \Harsha\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
-    'oauth' => \Harsha\OAuth2Server\Middleware\OAuthMiddleware::class,
-    'oauth-client' => \Harsha\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
-    'oauth-user' => \Harsha\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
+    'check-authorization-params' => \Streamlabs\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
+    'oauth' => \Streamlabs\OAuth2Server\Middleware\OAuthMiddleware::class,
+    'oauth-client' => \Streamlabs\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
+    'oauth-user' => \Streamlabs\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
 ]);
 ```
 
 ... and Authorizer alias
 ```php
-class_alias(\Harsha\OAuth2Server\Facades\Authorizer::class, 'Authorizer');
+class_alias(\Streamlabs\OAuth2Server\Facades\Authorizer::class, 'Authorizer');
 ```
 
 ### Copy config

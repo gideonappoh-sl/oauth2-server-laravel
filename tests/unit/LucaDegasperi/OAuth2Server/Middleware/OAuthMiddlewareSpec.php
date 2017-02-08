@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace unit\Harsha\OAuth2Server\Middleware;
+namespace unit\Streamlabs\OAuth2Server\Middleware;
 
 use Illuminate\Http\Request;
 use League\OAuth2\Server\Exception\AccessDeniedException;
 use League\OAuth2\Server\Exception\InvalidScopeException;
-use Harsha\OAuth2Server\Authorizer;
+use Streamlabs\OAuth2Server\Authorizer;
 use PhpSpec\ObjectBehavior;
 
 class OAuthMiddlewareSpec extends ObjectBehavior
@@ -35,7 +35,7 @@ class OAuthMiddlewareSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Harsha\OAuth2Server\Middleware\OAuthMiddleware');
+        $this->shouldHaveType('Streamlabs\OAuth2Server\Middleware\OAuthMiddleware');
     }
 
     public function it_blocks_invalid_access_tokens(Request $request, Authorizer $authorizer)

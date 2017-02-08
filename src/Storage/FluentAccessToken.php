@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server\Storage;
+namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
 use League\OAuth2\Server\Entity\AccessTokenEntity;
@@ -44,7 +44,7 @@ class FluentAccessToken extends AbstractFluentAdapter implements AccessTokenInte
                ->setId($result->access_token)
                ->setExpireTime(time()+3600);
                //->setExpireTime((int) $result->expire_time);
-    }       
+    }
 
     /*
     public function getByRefreshToken(RefreshTokenEntity $refreshToken)

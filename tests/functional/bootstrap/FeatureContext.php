@@ -11,7 +11,7 @@
 
 use Behat\Behat\Exception\PendingException;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
-use Harsha\OAuth2Server\Tests\Database\Seeders\OAuth2DatabaseSeeder;
+use Streamlabs\OAuth2Server\Tests\Database\Seeders\OAuth2DatabaseSeeder;
 use Orchestra\Testbench\BehatFeatureContext;
 use PHPUnit_Framework_Assert as PHPUnit;
 
@@ -107,7 +107,7 @@ class FeatureContext extends BehatFeatureContext
     protected function getPackageAliases()
     {
         return [
-            'Authorizer' => 'Harsha\OAuth2Server\Facades\AuthorizerFacade',
+            'Authorizer' => 'Streamlabs\OAuth2Server\Facades\AuthorizerFacade',
         ];
     }
 
@@ -119,8 +119,8 @@ class FeatureContext extends BehatFeatureContext
     protected function getPackageProviders()
     {
         return [
-            'Harsha\OAuth2Server\Storage\FluentStorageServiceProvider',
-            'Harsha\OAuth2Server\OAuth2ServerServiceProvider',
+            'Streamlabs\OAuth2Server\Storage\FluentStorageServiceProvider',
+            'Streamlabs\OAuth2Server\OAuth2ServerServiceProvider',
         ];
     }
 

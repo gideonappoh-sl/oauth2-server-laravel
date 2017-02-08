@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Harsha\OAuth2Server;
+namespace Streamlabs\OAuth2Server;
 
 use Illuminate\Contracts\Container\Container as Application;
 use Illuminate\Foundation\Application as LaravelApplication;
@@ -23,10 +23,10 @@ use League\OAuth2\Server\Storage\ClientInterface;
 use League\OAuth2\Server\Storage\RefreshTokenInterface;
 use League\OAuth2\Server\Storage\ScopeInterface;
 use League\OAuth2\Server\Storage\SessionInterface;
-use Harsha\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware;
-use Harsha\OAuth2Server\Middleware\OAuthClientOwnerMiddleware;
-use Harsha\OAuth2Server\Middleware\OAuthMiddleware;
-use Harsha\OAuth2Server\Middleware\OAuthUserOwnerMiddleware;
+use Streamlabs\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware;
+use Streamlabs\OAuth2Server\Middleware\OAuthClientOwnerMiddleware;
+use Streamlabs\OAuth2Server\Middleware\OAuthMiddleware;
+use Streamlabs\OAuth2Server\Middleware\OAuthUserOwnerMiddleware;
 
 /**
  * This is the oauth2 server service provider class.
