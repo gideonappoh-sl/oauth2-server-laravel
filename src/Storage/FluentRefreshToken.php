@@ -43,7 +43,8 @@ class FluentRefreshToken extends AbstractFluentAdapter implements RefreshTokenIn
         return (new RefreshTokenEntity($this->getServer()))
                ->setId($result->refresh_token)
                ->setAccessTokenId($result->access_token)
-               ->setExpireTime((int) $result->expire_time);
+               ->setExpireTime(time()+3600);
+               //->setExpireTime((int) $result->expire_time); // Do not expire refresh token
     }
 
     /**
