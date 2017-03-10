@@ -33,7 +33,6 @@ class FluentRefreshToken extends AbstractFluentAdapter implements RefreshTokenIn
     {
         $result = $this->getConnection()->table('oauth_refresh_tokens')
                 ->where('oauth_refresh_tokens.refresh_token', $token)
-                ->where('oauth_refresh_tokens.expire_time', '>=', time())
                 ->first();
 
         if (is_null($result)) {
