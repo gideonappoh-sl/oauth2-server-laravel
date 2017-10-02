@@ -13,6 +13,7 @@ namespace Streamlabs\OAuth2Server\Middleware;
 
 use Closure;
 use League\OAuth2\Server\Exception\InvalidScopeException;
+use League\OAuth2\Server\Exception\InvalidClientException;
 use Streamlabs\OAuth2Server\Authorizer;
 
 /**
@@ -70,6 +71,7 @@ class OAuthMiddleware
         $this->authorizer->setRequest($request);
 
         $this->authorizer->validateAccessToken($this->httpHeadersOnly);
+        $this->isAppBlocked($this->authorizer->getClientId());
         $this->validateScopes($scopes);
 
         return $next($request);
@@ -86,6 +88,20 @@ class OAuthMiddleware
     {
         if (!empty($scopes) && !$this->authorizer->hasScope($scopes)) {
             throw new InvalidScopeException(implode(',', $scopes));
+        }
+    }
+
+    /**
+     * Validate the scopes.
+     *
+     * @param $clientId
+     *
+     * @throws \League\OAuth2\Server\Exception\InvalidClientException
+     */
+    public function isAppBlocked($clientId)
+    {
+        if (in_array($clientId, explode(',', config('oauth2.blocked_oauth_clients')))) {
+            throw new InvalidClientException();
         }
     }
 }
