@@ -92,7 +92,7 @@ class OAuthMiddleware
     }
 
     /**
-     * Validate the scopes.
+     * Validate the oauth app.
      *
      * @param $clientId
      *
