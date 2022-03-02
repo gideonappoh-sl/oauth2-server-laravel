@@ -62,6 +62,7 @@ class FluentStorageServiceProvider extends ServiceProvider
         $app->singleton(FluentAccessToken::class, function () use ($provider) {
             $storage = new FluentAccessToken($provider->app['db']);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -69,6 +70,7 @@ class FluentStorageServiceProvider extends ServiceProvider
         $app->singleton(FluentAuthCode::class, function () use ($provider) {
             $storage = new FluentAuthCode($provider->app['db']);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -77,6 +79,7 @@ class FluentStorageServiceProvider extends ServiceProvider
             $limitClientsToGrants = $app['config']->get('oauth2.limit_clients_to_grants');
             $storage = new FluentClient($provider->app['db'], $limitClientsToGrants);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -84,6 +87,7 @@ class FluentStorageServiceProvider extends ServiceProvider
         $app->singleton(FluentRefreshToken::class, function () use ($provider) {
             $storage = new FluentRefreshToken($provider->app['db']);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -93,6 +97,7 @@ class FluentStorageServiceProvider extends ServiceProvider
             $limitScopesToGrants = $app['config']->get('oauth2.limit_scopes_to_grants');
             $storage = new FluentScope($provider->app['db'], $limitClientsToScopes, $limitScopesToGrants);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -100,6 +105,7 @@ class FluentStorageServiceProvider extends ServiceProvider
         $app->singleton(FluentSession::class, function () use ($provider) {
             $storage = new FluentSession($provider->app['db']);
             $storage->setConnectionName($provider->getConnectionName());
+            $storage->setTablePrefix($provider->getTablePrefix());
 
             return $storage;
         });
@@ -128,5 +134,15 @@ class FluentStorageServiceProvider extends ServiceProvider
     public function getConnectionName()
     {
         return ($this->app['config']->get('oauth2.database') !== 'default') ? $this->app['config']->get('oauth2.database') : null;
+    }
+
+    /**
+     * Get's the table prefix from config file.
+     *
+     * @return string
+     */
+    public function getTablePrefix()
+    {
+        return (string) $this->app['config']->get('oauth2.table_prefix');
     }
 }

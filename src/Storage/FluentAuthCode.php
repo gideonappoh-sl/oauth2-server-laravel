@@ -32,9 +32,10 @@ class FluentAuthCode extends AbstractFluentAdapter implements AuthCodeInterface
      */
     public function get($code)
     {
-        $result = $this->getConnection()->table('oauth_auth_codes')
-            ->where('oauth_auth_codes.auth_code', $code)
-            ->where('oauth_auth_codes.expire_time', '>=', time())
+        $result = $this->getConnection()
+            ->table($this->getFullTableName('oauth_auth_codes'))
+            ->where($this->getFullTableName('oauth_auth_codes.auth_code'), $code)
+            ->where($this->getFullTableName('oauth_auth_codes.expire_time'), '>=', time())
             ->first();
 
         if (is_null($result)) {
@@ -56,10 +57,16 @@ class FluentAuthCode extends AbstractFluentAdapter implements AuthCodeInterface
      */
     public function getScopes(AuthCodeEntity $token)
     {
-        $result = $this->getConnection()->table('oauth_auth_code_scopes')
-            ->select('oauth_scopes.*')
-            ->join('oauth_scopes', 'oauth_auth_code_scopes.scope', '=', 'oauth_scopes.id')
-            ->where('oauth_auth_code_scopes.auth_code', $token->getId())
+        $result = $this->getConnection()
+            ->table($this->getFullTableName('oauth_auth_code_scopes'))
+            ->select($this->getFullTableName('oauth_scopes.*'))
+            ->join(
+                $this->getFullTableName('oauth_scopes'),
+                $this->getFullTableName('oauth_auth_code_scopes.scope'),
+                '=',
+                $this->getFullTableName('oauth_scopes.id')
+            )
+            ->where($this->getFullTableName('oauth_auth_code_scopes.auth_code'), $token->getId())
             ->get();
 
         $scopes = [];
@@ -84,10 +91,12 @@ class FluentAuthCode extends AbstractFluentAdapter implements AuthCodeInterface
      */
     public function associateScope(AuthCodeEntity $token, ScopeEntity $scope)
     {
-        $this->getConnection()->table('oauth_auth_code_scopes')->insert([
-            'auth_code' => $token->getId(),
-            'scope' => $scope->getId(),
-        ]);
+        $this->getConnection()
+            ->table($this->getFullTableName('oauth_auth_code_scopes'))
+            ->insert([
+                'auth_code' => $token->getId(),
+                'scope' => $scope->getId(),
+            ]);
     }
 
     /**
@@ -99,9 +108,10 @@ class FluentAuthCode extends AbstractFluentAdapter implements AuthCodeInterface
      */
     public function delete(AuthCodeEntity $token)
     {
-        $this->getConnection()->table('oauth_auth_codes')
-        ->where('oauth_auth_codes.auth_code', $token->getId())
-        ->delete();
+        $this->getConnection()
+            ->table($this->getFullTableName('oauth_auth_codes'))
+            ->where($this->getFullTableName('oauth_auth_codes.auth_code'), $token->getId())
+            ->delete();
     }
 
     /**
@@ -116,11 +126,13 @@ class FluentAuthCode extends AbstractFluentAdapter implements AuthCodeInterface
      */
     public function create($token, $expireTime, $sessionId, $redirectUri)
     {
-        $this->getConnection()->table('oauth_auth_codes')->insert([
-            'auth_code' => $token,
-            'session_id' => $sessionId,
-            'client_redirect_uri' => $redirectUri,
-            'expire_time' => $expireTime,
-        ]);
+        $this->getConnection()
+            ->table($this->getFullTableName('oauth_auth_codes'))
+            ->insert([
+                'auth_code' => $token,
+                'session_id' => $sessionId,
+                'client_redirect_uri' => $redirectUri,
+                'expire_time' => $expireTime,
+            ]);
     }
 }
