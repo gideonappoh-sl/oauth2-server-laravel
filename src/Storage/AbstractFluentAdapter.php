@@ -29,6 +29,13 @@ abstract class AbstractFluentAdapter extends AbstractStorage
     protected $resolver;
 
     /**
+     * Prefix all tables with the specified character(s).
+     *
+     * @var string
+     */
+    protected $tablePrefix;
+
+    /**
      * The connection name.
      *
      * @var string
@@ -78,6 +85,11 @@ abstract class AbstractFluentAdapter extends AbstractStorage
         $this->connectionName = $connectionName;
     }
 
+    public function setTablePrefix(string $tablePrefix)
+    {
+        $this->tablePrefix = (string) $tablePrefix;
+    }
+
     /**
      * Get the connection.
      *
@@ -86,5 +98,10 @@ abstract class AbstractFluentAdapter extends AbstractStorage
     protected function getConnection()
     {
         return $this->resolver->connection($this->connectionName);
+    }
+
+    protected function getFullTableName(string $table)
+    {
+        return $this->tablePrefix . $table;
     }
 }

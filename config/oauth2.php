@@ -158,4 +158,15 @@ return [
 
     'http_headers_only' => false,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Table Prefix
+    |--------------------------------------------------------------------------
+    |
+    | This will prepend the specified prefix to all tables used.
+    |
+    */
+
+    'table_prefix' => '',
+
 ];
