@@ -12,8 +12,8 @@
 namespace Streamlabs\OAuth2Server\Middleware;
 
 use Closure;
-use League\OAuth2\Server\Exception\InvalidScopeException;
-use League\OAuth2\Server\Exception\InvalidClientException;
+use LocalizedLeague\OAuth2\Server\Exception\InvalidScopeException;
+use LocalizedLeague\OAuth2\Server\Exception\InvalidClientException;
 use Streamlabs\OAuth2Server\Authorizer;
 
 /**

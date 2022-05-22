@@ -12,7 +12,7 @@
 namespace Streamlabs\OAuth2Server\Middleware;
 
 use Closure;
-use League\OAuth2\Server\Exception\AccessDeniedException;
+use LocalizedLeague\OAuth2\Server\Exception\AccessDeniedException;
 use Streamlabs\OAuth2Server\Authorizer;
 
 /**

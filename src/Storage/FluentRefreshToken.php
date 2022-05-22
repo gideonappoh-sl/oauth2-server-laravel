@@ -12,8 +12,8 @@
 namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
-use League\OAuth2\Server\Entity\RefreshTokenEntity;
-use League\OAuth2\Server\Storage\RefreshTokenInterface;
+use LocalizedLeague\OAuth2\Server\Entity\RefreshTokenEntity;
+use LocalizedLeague\OAuth2\Server\Storage\RefreshTokenInterface;
 
 /**
  * This is the fluent refresh token class.

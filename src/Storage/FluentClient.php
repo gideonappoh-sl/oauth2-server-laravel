@@ -13,9 +13,9 @@ namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
-use League\OAuth2\Server\Entity\ClientEntity;
-use League\OAuth2\Server\Entity\SessionEntity;
-use League\OAuth2\Server\Storage\ClientInterface;
+use LocalizedLeague\OAuth2\Server\Entity\ClientEntity;
+use LocalizedLeague\OAuth2\Server\Entity\SessionEntity;
+use LocalizedLeague\OAuth2\Server\Storage\ClientInterface;
 
 /**
  * This is the fluent client class.

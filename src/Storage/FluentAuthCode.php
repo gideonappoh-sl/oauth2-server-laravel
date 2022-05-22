@@ -12,9 +12,9 @@
 namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
-use League\OAuth2\Server\Entity\AuthCodeEntity;
-use League\OAuth2\Server\Entity\ScopeEntity;
-use League\OAuth2\Server\Storage\AuthCodeInterface;
+use LocalizedLeague\OAuth2\Server\Entity\AuthCodeEntity;
+use LocalizedLeague\OAuth2\Server\Entity\ScopeEntity;
+use LocalizedLeague\OAuth2\Server\Storage\AuthCodeInterface;
 
 /**
  * This is the fluent auth code class.

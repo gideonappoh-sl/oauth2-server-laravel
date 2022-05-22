@@ -1,0 +1,69 @@
+{
+	"name": "localizedleague/oauth2-server",
+	"description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
+	"homepage": "http://oauth2.thephpleague.com/",
+	"license": "MIT",
+    "type": "library",
+	"require": {
+		"php": ">=5.4.0",
+		"symfony/http-foundation": "~2.4|~3.0",
+		"localizedleague/event": "*"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "4.3.*",
+		"mockery/mockery": "0.9.*"
+	},
+	"repositories": [
+		{
+            "type": "path",
+            "url": "../event",
+			"options": {
+                "symlink": false
+            }
+        },
+		{
+			"type": "path",
+			"url": "./",
+			"options": {
+                "symlink": false
+            }
+		}
+	],
+	"keywords": [
+		"oauth",
+		"oauth2",
+		"oauth 2",
+		"oauth 2.0",
+		"server",
+		"auth",
+		"authorization",
+		"authorisation",
+		"authentication",
+		"resource",
+		"api",
+		"auth",
+		"protect",
+		"secure"
+	],
+	"authors": [
+		{
+			"name": "Alex Bilbie",
+			"email": "hello@alexbilbie.com",
+			"homepage": "http://www.alexbilbie.com",
+			"role": "Developer"
+		}
+	],
+	"replace": {
+		"localizedleague/oauth2server": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"LocalizedLeague\\OAuth2\\Server\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"LocalizedLeagueTests\\": "tests/unit/"
+		}
+	}
+}

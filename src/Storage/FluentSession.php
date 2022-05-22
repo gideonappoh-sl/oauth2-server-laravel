@@ -12,11 +12,11 @@
 namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
-use League\OAuth2\Server\Entity\AccessTokenEntity;
-use League\OAuth2\Server\Entity\AuthCodeEntity;
-use League\OAuth2\Server\Entity\ScopeEntity;
-use League\OAuth2\Server\Entity\SessionEntity;
-use League\OAuth2\Server\Storage\SessionInterface;
+use LocalizedLeague\OAuth2\Server\Entity\AccessTokenEntity;
+use LocalizedLeague\OAuth2\Server\Entity\AuthCodeEntity;
+use LocalizedLeague\OAuth2\Server\Entity\ScopeEntity;
+use LocalizedLeague\OAuth2\Server\Entity\SessionEntity;
+use LocalizedLeague\OAuth2\Server\Storage\SessionInterface;
 
 /**
  * This is the fluent session class.
