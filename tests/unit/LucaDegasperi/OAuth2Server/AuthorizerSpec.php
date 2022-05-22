@@ -11,13 +11,13 @@
 
 namespace unit\Streamlabs\OAuth2Server;
 
-use League\OAuth2\Server\AuthorizationServer;
-use League\OAuth2\Server\Entity\AccessTokenEntity;
-use League\OAuth2\Server\Entity\ClientEntity;
-use League\OAuth2\Server\Entity\SessionEntity;
-use League\OAuth2\Server\Grant\AuthCodeGrant;
-use League\OAuth2\Server\ResourceServer;
-use League\OAuth2\Server\Util\RedirectUri;
+use LocalizedLeague\OAuth2\Server\AuthorizationServer;
+use LocalizedLeague\OAuth2\Server\Entity\AccessTokenEntity;
+use LocalizedLeague\OAuth2\Server\Entity\ClientEntity;
+use LocalizedLeague\OAuth2\Server\Entity\SessionEntity;
+use LocalizedLeague\OAuth2\Server\Grant\AuthCodeGrant;
+use LocalizedLeague\OAuth2\Server\ResourceServer;
+use LocalizedLeague\OAuth2\Server\Util\RedirectUri;
 use Streamlabs\OAuth2Server\Exceptions\NoActiveAccessTokenException;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\HttpFoundation\Request;

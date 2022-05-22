@@ -12,8 +12,8 @@
 namespace unit\Streamlabs\OAuth2Server\Middleware;
 
 use Illuminate\Http\Request;
-use League\OAuth2\Server\Exception\AccessDeniedException;
-use League\OAuth2\Server\Exception\InvalidScopeException;
+use LocalizedLeague\OAuth2\Server\Exception\AccessDeniedException;
+use LocalizedLeague\OAuth2\Server\Exception\InvalidScopeException;
 use Streamlabs\OAuth2Server\Authorizer;
 use PhpSpec\ObjectBehavior;
 

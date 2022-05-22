@@ -12,7 +12,7 @@
 namespace unit\Streamlabs\OAuth2Server\Middleware;
 
 use Illuminate\Http\Request;
-use League\OAuth2\Server\Exception\InvalidRequestException;
+use LocalizedLeague\OAuth2\Server\Exception\InvalidRequestException;
 use Streamlabs\OAuth2Server\Authorizer;
 use PhpSpec\ObjectBehavior;
 

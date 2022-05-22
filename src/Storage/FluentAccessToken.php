@@ -12,9 +12,9 @@
 namespace Streamlabs\OAuth2Server\Storage;
 
 use Carbon\Carbon;
-use League\OAuth2\Server\Entity\AccessTokenEntity;
-use League\OAuth2\Server\Entity\ScopeEntity;
-use League\OAuth2\Server\Storage\AccessTokenInterface;
+use LocalizedLeague\OAuth2\Server\Entity\AccessTokenEntity;
+use LocalizedLeague\OAuth2\Server\Entity\ScopeEntity;
+use LocalizedLeague\OAuth2\Server\Storage\AccessTokenInterface;
 
 /**
  * This is the fluent access token class.

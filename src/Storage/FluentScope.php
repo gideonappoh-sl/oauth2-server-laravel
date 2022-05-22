@@ -12,8 +12,8 @@
 namespace Streamlabs\OAuth2Server\Storage;
 
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
-use League\OAuth2\Server\Entity\ScopeEntity;
-use League\OAuth2\Server\Storage\ScopeInterface;
+use LocalizedLeague\OAuth2\Server\Entity\ScopeEntity;
+use LocalizedLeague\OAuth2\Server\Storage\ScopeInterface;
 
 /**
  * This is the fluent scope class.

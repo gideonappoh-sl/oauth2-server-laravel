@@ -29,12 +29,12 @@ return [
 
     'grant_types' => [
         'authorization_code' => [
-            'class' => '\League\OAuth2\Server\Grant\AuthCodeGrant',
+            'class' => '\LocalizedLeague\OAuth2\Server\Grant\AuthCodeGrant',
             'access_token_ttl' => 3600,
             'auth_token_ttl'   => 3600
         ],
         'refresh_token' => [
-            'class' => '\League\OAuth2\Server\Grant\RefreshTokenGrant',
+            'class' => '\LocalizedLeague\OAuth2\Server\Grant\RefreshTokenGrant',
             'access_token_ttl' => 3600,
             'refresh_token_ttl' => 36000
         ]
@@ -48,11 +48,11 @@ return [
     | This will tell the authorization server the output format for the access
     | token and the resource server how to parse the access token used.
     |
-    | Default value is League\OAuth2\Server\TokenType\Bearer
+    | Default value is LocalizedLeague\OAuth2\Server\TokenType\Bearer
     |
     */
 
-    'token_type' => 'League\OAuth2\Server\TokenType\Bearer',
+    'token_type' => 'LocalizedLeague\OAuth2\Server\TokenType\Bearer',
 
     /*
     |--------------------------------------------------------------------------

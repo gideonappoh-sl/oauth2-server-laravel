@@ -11,11 +11,11 @@
 
 namespace Streamlabs\OAuth2Server;
 
-use League\OAuth2\Server\AuthorizationServer as Issuer;
-use League\OAuth2\Server\Exception\AccessDeniedException;
-use League\OAuth2\Server\ResourceServer as Checker;
-use League\OAuth2\Server\TokenType\TokenTypeInterface;
-use League\OAuth2\Server\Util\RedirectUri;
+use LocalizedLeague\OAuth2\Server\AuthorizationServer as Issuer;
+use LocalizedLeague\OAuth2\Server\Exception\AccessDeniedException;
+use LocalizedLeague\OAuth2\Server\ResourceServer as Checker;
+use LocalizedLeague\OAuth2\Server\TokenType\TokenTypeInterface;
+use LocalizedLeague\OAuth2\Server\Util\RedirectUri;
 use Streamlabs\OAuth2Server\Exceptions\NoActiveAccessTokenException;
 use Symfony\Component\HttpFoundation\Request;
 

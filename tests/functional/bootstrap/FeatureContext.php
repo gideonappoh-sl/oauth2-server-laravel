@@ -10,7 +10,7 @@
  */
 
 use Behat\Behat\Exception\PendingException;
-use League\OAuth2\Server\Grant\ClientCredentialsGrant;
+use LocalizedLeague\OAuth2\Server\Grant\ClientCredentialsGrant;
 use Streamlabs\OAuth2Server\Tests\Database\Seeders\OAuth2DatabaseSeeder;
 use Orchestra\Testbench\BehatFeatureContext;
 use PHPUnit_Framework_Assert as PHPUnit;
