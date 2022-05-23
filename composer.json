@@ -37,10 +37,9 @@
             "package": {
                 "name": "localizedleague/event",
                 "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/twitchalerts/localizedleague-event.git",
-                    "type": "git",
-                    "reference": "master"
+                "dist": {
+                    "url": "https://github.com/twitchalerts/oauth2-server-laravel/localizedleague/event.zip",
+                    "type": "zip"
                 }
             }
         },
@@ -49,10 +48,9 @@
             "package": {
                 "name": "localizedleague/oauth2-server",
                 "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/twitchalerts/localizedleague-oauth2-server.git",
-                    "type": "git",
-                    "reference": "master"
+                "dist": {
+                    "url": "https://github.com/twitchalerts/oauth2-server-laravel/localizedleague/oauth2-server.zip",
+                    "type": "zip"
                 }
             }
         }
