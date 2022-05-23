@@ -40,7 +40,17 @@
                 "dist": {
                     "url": "https://github.com/twitchalerts/oauth2-server-laravel/raw/master/localizedleague/event.zip",
                     "type": "zip"
-                }
+                },
+				"autoload": {
+					"psr-4": {
+						"LocalizedLeague\\Event\\": "src/"
+					}
+				},
+				"autoload-dev": {
+					"psr-4": {
+						"LocalizedLeague\\Event\\Stub\\": "stubs/"
+					}
+				}
             }
         },
         {
@@ -51,6 +61,16 @@
                 "dist": {
                     "url": "https://github.com/twitchalerts/oauth2-server-laravel/raw/master/localizedleague/oauth2-server.zip",
                     "type": "zip"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "LocalizedLeague\\OAuth2\\Server\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "LocalizedLeagueTests\\": "tests/unit/"
+                    }
                 }
             }
         }
