@@ -21,7 +21,8 @@
         "illuminate/http": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.*",
         "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.*",
         "illuminate/config": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.*",
-        "localizedleague/oauth2-server": "*"
+        "localizedleague/event": "dev-master",
+        "localizedleague/oauth2-server": "dev-master"
     },
     "require-dev": {
         "orchestra/testbench": "3.1.* || 3.2.*",
@@ -32,17 +33,27 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "./localizedleague/event",
-            "options": {
-                "symlink": false
+            "type": "package",
+            "package": {
+                "name": "localizedleague/event",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/twitchalerts/localizedleague-event.git",
+                    "type": "git",
+                    "reference": "master"
+                }
             }
         },
         {
-            "type": "path",
-            "url": "./localizedleague/oauth2-server",
-            "options": {
-                "symlink": false
+            "type": "package",
+            "package": {
+                "name": "localizedleague/oauth2-server",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/twitchalerts/localizedleague-oauth2-server.git",
+                    "type": "git",
+                    "reference": "master"
+                }
             }
         }
     ],
